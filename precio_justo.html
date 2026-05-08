@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precio Justo - San Martín</title>
+    <style>
+        .categoria-btn { background: #f8f9fa; color: #666; padding: 8px 15px; border-radius: 20px; font-size: 13px; border: 1px solid #ddd; cursor: pointer; white-space: nowrap; }
+        .btn-active { background: #e8f5e9 !important; color: #2e7d32 !important; border: 1px solid #2ecc71 !important; font-weight: bold; }
+        .oferta-card { display: block; margin-bottom: 15px; }
+    </style>
+</head>
+<body style="margin:0; background:#f0f2f5; font-family:Arial;">
+
+<div style="background:white; padding:15px; text-align:center; border-bottom:3px solid #2ecc71; position: sticky; top: 0; z-index: 100;">
+    <span style="background:#2ecc71; color:white; padding:5px 10px; border-radius:50%; font-weight:bold;">✓</span>
+    <h2 style="display:inline; margin-left:10px;">Precio Justo</h2>
+    <p style="margin:5px 0 0; font-size:10px; color:#888;">COMPRÁ • VENDÉ • DESCUBRÍ</p>
+</div>
+
+<div style="display: flex; gap: 10px; overflow-x: auto; padding: 15px; background: white; border-bottom: 1px solid #eee;">
+    <div class="categoria-btn btn-active" onclick="filtrar('todas', this)">🌟 Todas</div>
+    <div class="categoria-btn" onclick="filtrar('comida', this)">🍔 Comidas</div>
+    <div class="categoria-btn" onclick="filtrar('carne', this)">🥩 Carnes</div>
+    <div class="categoria-btn" onclick="filtrar('verdura', this)">🍎 Verdura</div>
+</div>
+
+<div id="contenedor-ofertas" style="padding: 15px;">
+    
+    <div class="oferta-card comida">
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500" style="width: 100%; height: 180px; object-fit: cover;">
+            <div style="padding: 15px;">
+                <div style="color: #2ecc71; font-size: 12px; font-weight: bold;">✓ OFERTA VERIFICADA</div>
+                <h3 style="margin: 5px 0;">Sándwichs de Miga</h3>
+                <p style="color: #27af61; font-size: 26px; font-weight: bold; margin: 5px 0;">$1.000</p>
+                <p style="color: #666; font-size: 14px;">📍 Despensa Miriam</p>
+                <a href="https://wa.me/542634XXXXXX" style="display: block; margin-top: 15px; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 8px; font-weight: bold; text-decoration: none;">Pedir por WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="oferta-card carne">
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500" style="width: 100%; height: 180px; object-fit: cover;">
+            <div style="padding: 15px;">
+                <div style="color: #2ecc71; font-size: 12px; font-weight: bold;">✓ OFERTA VERIFICADA</div>
+                <h3 style="margin: 5px 0;">Asado de Primera</h3>
+                <p style="color: #27af61; font-size: 26px; font-weight: bold; margin: 5px 0;">$19.900</p>
+                <p style="color: #666; font-size: 14px;">📍 Carnicería El Pepo</p>
+                <a href="https://wa.me/542634XXXXXX" style="display: block; margin-top: 15px; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 8px; font-weight: bold; text-decoration: none;">Consultar Stock</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="oferta-card verdura">
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=500" style="width: 100%; height: 180px; object-fit: cover;">
+            <div style="padding: 15px;">
+                <div style="color: #2ecc71; font-size: 12px; font-weight: bold;">✓ OFERTA VERIFICADA</div>
+                <h3 style="margin: 5px 0;">Bolsón de Verduras</h3>
+                <p style="color: #27af61; font-size: 26px; font-weight: bold; margin: 5px 0;">$15.000</p>
+                <p style="color: #666; font-size: 14px;">📍 Verdulería El Camote</p>
+                <a href="https://wa.me/542634XXXXXX" style="display: block; margin-top: 15px; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 8px; font-weight: bold; text-decoration: none;">Encargar Bolsón</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function filtrar(cat, btn) {
+    // Cambiar color de botones
+    let botones = document.querySelectorAll('.categoria-btn');
+    botones.forEach(b => b.classList.remove('btn-active'));
+    btn.classList.add('btn-active');
+
+    // Filtrar tarjetas
+    let tarjetas = document.querySelectorAll('.oferta-card');
+    tarjetas.forEach(t => {
+        if (cat === 'todas' || t.classList.contains(cat)) {
+            t.style.display = 'block';
+        } else {
+            t.style.display = 'none';
+        }
+    });
+}
+</script>
+
+</body>
+</html>
