@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "categoria": "comida",
+    "negocio": "Despensa Miriam",
+    "producto": "Sándwichs de Miga",
+    "precio": "1.000",
+    "whatsapp": "542634XXXXXX",
+    "imagen": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500"
+  },
+  {
+    "id": 2,
+    "categoria": "carne",
+    "negocio": "Carnicería El Pepo",
+    "producto": "Asado de Primera",
+    "precio": "19.900",
+    "whatsapp": "542634XXXXXX",
+    "imagen": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500"
+  },
+  {
+    "id": 3,
+    "categoria": "verdura",
+    "negocio": "Verdulería El Camote",
+    "producto": "Bolsón de Verduras",
+    "precio": "15.000",
+    "whatsapp": "542634XXXXXX",
+    "imagen": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500"
+  }
+]

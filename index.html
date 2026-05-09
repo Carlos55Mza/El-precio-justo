@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Precio Justo - San Martín</title>
     <style>
+        /* ESTILOS (Mantenemos los mismos para no cambiar el diseño) */
         .categoria-btn { background: #f8f9fa; color: #666; padding: 8px 15px; border-radius: 20px; font-size: 13px; border: 1px solid #ddd; cursor: pointer; white-space: nowrap; }
         .btn-active { background: #e8f5e9 !important; color: #2e7d32 !important; border: 1px solid #2ecc71 !important; font-weight: bold; }
         .oferta-card { display: block; margin-bottom: 15px; }
+        #loading { text-align: center; color: #666; padding: 20px; font-style: italic; }
     </style>
+    <link rel="manifest" href="manifest.json">
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      }
+    </script>
 </head>
 <body style="margin:0; background:#f0f2f5; font-family:Arial;">
 
 <div style="background:white; padding:15px; text-align:center; border-bottom:3px solid #2ecc71; position: sticky; top: 0; z-index: 100;">
     <span style="background:#2ecc71; color:white; padding:5px 10px; border-radius:50%; font-weight:bold;">✓</span>
     <h2 style="display:inline; margin-left:10px;">Precio Justo</h2>
-    <p style="margin:5px 0 0; font-size:10px; color:#888;">COMPRÁ • VENDÉ • DESCUBRÍ</p>
+    <p style="margin:5px 0 0; font-size:10px; color:#888;">COMPRÁ • VENDÉ • DESCUBRÍ (San Martín)</p>
 </div>
 
 <div style="display: flex; gap: 10px; overflow-x: auto; padding: 15px; background: white; border-bottom: 1px solid #eee;">
@@ -26,65 +34,75 @@
 </div>
 
 <div id="contenedor-ofertas" style="padding: 15px;">
-    
-    <div class="oferta-card comida">
-        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500" style="width: 100%; height: 180px; object-fit: cover;">
-            <div style="padding: 15px;">
-                <div style="color: #2ecc71; font-size: 12px; font-weight: bold;">✓ OFERTA VERIFICADA</div>
-                <h3 style="margin: 5px 0;">Sándwichs de Miga</h3>
-                <p style="color: #27af61; font-size: 26px; font-weight: bold; margin: 5px 0;">$1.000</p>
-                <p style="color: #666; font-size: 14px;">📍 Despensa Miriam</p>
-                <a href="https://wa.me/542634XXXXXX" style="display: block; margin-top: 15px; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 8px; font-weight: bold; text-decoration: none;">Pedir por WhatsApp</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="oferta-card carne">
-        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500" style="width: 100%; height: 180px; object-fit: cover;">
-            <div style="padding: 15px;">
-                <div style="color: #2ecc71; font-size: 12px; font-weight: bold;">✓ OFERTA VERIFICADA</div>
-                <h3 style="margin: 5px 0;">Asado de Primera</h3>
-                <p style="color: #27af61; font-size: 26px; font-weight: bold; margin: 5px 0;">$19.900</p>
-                <p style="color: #666; font-size: 14px;">📍 Carnicería El Pepo</p>
-                <a href="https://wa.me/542634XXXXXX" style="display: block; margin-top: 15px; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 8px; font-weight: bold; text-decoration: none;">Consultar Stock</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="oferta-card verdura">
-        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=500" style="width: 100%; height: 180px; object-fit: cover;">
-            <div style="padding: 15px;">
-                <div style="color: #2ecc71; font-size: 12px; font-weight: bold;">✓ OFERTA VERIFICADA</div>
-                <h3 style="margin: 5px 0;">Bolsón de Verduras</h3>
-                <p style="color: #27af61; font-size: 26px; font-weight: bold; margin: 5px 0;">$15.000</p>
-                <p style="color: #666; font-size: 14px;">📍 Verdulería El Camote</p>
-                <a href="https://wa.me/542634XXXXXX" style="display: block; margin-top: 15px; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 8px; font-weight: bold; text-decoration: none;">Encargar Bolsón</a>
-            </div>
-        </div>
-    </div>
-
+    <div id="loading">Cargando las mejores ofertas de San Martín...</div>
 </div>
 
 <script>
-function filtrar(cat, btn) {
-    // Cambiar color de botones
-    let botones = document.querySelectorAll('.categoria-btn');
-    botones.forEach(b => b.classList.remove('btn-active'));
-    btn.classList.add('btn-active');
+    // VARIABLE GLOBAL PARA GUARDAR LAS OFERTAS
+    let todasLasOfertas = [];
 
-    // Filtrar tarjetas
-    let tarjetas = document.querySelectorAll('.oferta-card');
-    tarjetas.forEach(t => {
-        if (cat === 'todas' || t.classList.contains(cat)) {
-            t.style.display = 'block';
-        } else {
-            t.style.display = 'none';
+    // FUNCION PRINCIPAL: LEER EL ARCHIVO JSON
+    async function cargarOfertas() {
+        try {
+            // Buscamos el archivo ofertas.json que está en el mismo repositorio
+            const respuesta = await fetch('ofertas.json');
+            todasLasOfertas = await respuesta.json();
+            
+            // Si todo salió bien, dibujamos las ofertas
+            mostrarOfertas(todasLasOfertas);
+            
+            // Ocultamos el mensaje de cargando
+            document.getElementById('loading').style.display = 'none';
+        } catch (error) {
+            console.error('Error cargando ofertas:', error);
+            document.getElementById('loading').innerText = 'Hubo un error al cargar las ofertas. Por favor, reintente más tarde.';
         }
-    });
-}
+    }
+
+    // FUNCION PARA DIBUJAR LAS OFERTAS EN LA PANTALLA
+    function mostrarOfertas(listaDeOfertas) {
+        const contenedor = document.getElementById('contenedor-ofertas');
+        contenedor.innerHTML = ''; // Limpiamos el contenedor
+
+        listaDeOfertas.forEach(oferta => {
+            // Creamos el código HTML para cada oferta
+            const ofertaHTML = `
+                <div class="oferta-card ${oferta.categoria}">
+                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <img src="${oferta.imagen}" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div style="padding: 15px;">
+                            <div style="color: #2ecc71; font-size: 12px; font-weight: bold;">✓ OFERTA VERIFICADA</div>
+                            <h3 style="margin: 5px 0;">${oferta.producto}</h3>
+                            <p style="color: #27af61; font-size: 26px; font-weight: bold; margin: 5px 0;">$${oferta.precio}</p>
+                            <p style="color: #666; font-size: 14px;">📍 ${oferta.negocio}</p>
+                            <a href="https://wa.me/${oferta.whatsapp}?text=Hola!%20Vi%20tu%20oferta%20de%20${oferta.producto}%20en%20Precio%20Justo" style="display: block; margin-top: 15px; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 8px; font-weight: bold; text-decoration: none;">Pedir por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            // Agregamos la oferta al contenedor
+            contenedor.innerHTML += ofertaHTML;
+        });
+    }
+
+    // FUNCION PARA FILTRAR (Actualizada para trabajar con el JSON)
+    function filtrar(cat, btn) {
+        // Cambiar color de botones
+        let botones = document.querySelectorAll('.categoria-btn');
+        botones.forEach(b => b.classList.remove('btn-active'));
+        btn.classList.add('btn-active');
+
+        if (cat === 'todas') {
+            mostrarOfertas(todasLasOfertas);
+        } else {
+            // Filtramos la lista original
+            const ofertasFiltradas = todasLasOfertas.filter(oferta => oferta.categoria === cat);
+            mostrarOfertas(ofertasFiltradas);
+        }
+    }
+
+    // ARRANCAR LA CARGA CUANDO SE ABRE LA PAGINA
+    window.onload = cargarOfertas;
 </script>
 
 </body>
