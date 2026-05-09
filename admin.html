@@ -1,3 +1,15 @@
+<script>
+    // Tu contraseña secreta (podés cambiar 'Mendoza2026' por la que quieras)
+    const claveCorrecta = "Mendoza2026";
+    
+    let intento = prompt("Acceso Restringido - Ingrese la clave de Administrador:");
+
+    if (intento !== claveCorrecta) {
+        alert("Clave incorrecta. Volviendo a la página principal.");
+        window.location.href = "index.html"; // Te saca de ahí si le errás
+    }
+</script>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
