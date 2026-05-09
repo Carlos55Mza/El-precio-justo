@@ -25,5 +25,14 @@
     "precio": "15.000",
     "whatsapp": "542634XXXXXX",
     "imagen": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500"
-  }
+  },
+{
+  "id": 4,
+  "categoria": "servicio",
+  "negocio": "Fletes 'El Rápido'",
+  "producto": "Flete Local (San Martín)",
+  "precio": "8.500",
+  "whatsapp": "542634XXXXXX",
+  "imagen": "https://images.unsplash.com/photo-1586191128561-04331150417f?w=500"
+}
 ]
