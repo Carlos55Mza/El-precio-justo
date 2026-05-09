@@ -26,13 +26,17 @@
     <p style="margin:5px 0 0; font-size:10px; color:#888;">COMPRÁ • VENDÉ • DESCUBRÍ (San Martín)</p>
 </div>
 
-<div style="display: flex; gap: 10px; overflow-x: auto; padding: 15px; background: white; border-bottom: 1px solid #eee;">
-    <div class="categoria-btn btn-active" onclick="filtrar('todas', this)">🌟 Todas</div>
-    <div class="categoria-btn" onclick="filtrar('comida', this)">🍔 Comidas</div>
-    <div class="categoria-btn" onclick="filtrar('carne', this)">🥩 Carnes</div>
-    <div class="categoria-btn" onclick="filtrar('verdura', this)">🍎 Verdura</div>
+<div style="display: flex; gap: 10px; overflow-x: auto; padding: 15px; background: white; border-bottom: 1px solid #eee; scrollbar-width: none; -ms-overflow-style: none;">
+    <style>
+        /* Esto oculta la barrita de scroll pero permite deslizar */
+        div::-webkit-scrollbar { display: none; }
+    </style>
+    <div class="categoria-btn btn-active" onclick="filtrar('todas', this)" style="flex: 0 0 auto;">🌟 Todas</div>
+    <div class="categoria-btn" onclick="filtrar('comida', this)" style="flex: 0 0 auto;">🍔 Comidas</div>
+    <div class="categoria-btn" onclick="filtrar('carne', this)" style="flex: 0 0 auto;">🥩 Carnes</div>
+    <div class="categoria-btn" onclick="filtrar('verdura', this)" style="flex: 0 0 auto;">🍎 Verdura</div>
+    <div class="categoria-btn" onclick="filtrar('servicio', this)" style="flex: 0 0 auto;">🛠️ Servicios</div>
 </div>
-
 <div id="contenedor-ofertas" style="padding: 15px;">
     <div id="loading">Cargando las mejores ofertas de San Martín...</div>
 </div>
