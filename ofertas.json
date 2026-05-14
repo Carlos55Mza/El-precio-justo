@@ -35,25 +35,38 @@
     "whatsapp": "542634XXXXXX",
     "imagen": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500"
   },
-{
+ {
+
   "id": 4,
   "categoria": "indumentaria",
-  "negocio": "Fletes 'El Rápido'",
-  "producto": "Flete Local (San Martín)",
-  "precio": "8.500",
-  "whatsapp": "542634XXXXXX",
-  "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZkTeTvNjtbO17kTkuXtlq9IwFGyItTkpz7A&s"
-},
-{
+  "negocio": "Ely Style",
+  "producto": "Se viene el frío!! Camperas y chalecos.",
+  "precio": "50000",
+  "whatsapp": "542634356024",
+  "imagen": "https://i.postimg.cc/4HdRRqbB/camperas.jpg"
+ },
+
+ {
+  "id": 4,
+  "categoria": "indumentaria",
+  "negocio": "Ely Style",
+  "producto": "Para alentar a la Selección. Camiseta Argentina",
+  "precio": "45000",
+  "whatsapp": "542634356024",
+  "imagen": "https://i.postimg.cc/FYGb76jb/descarga-(4).jpg"
+ },
+
+ { 
   "id": 5,
   "categoria": "servicios",
   "negocio": "Daniel Alleva",
-  "producto": "Lavado completo de vehículos a domicilio. ",
+  "producto": "Lavado completo de vehículos a domicilio.",
   "precio": "10.000",
   "whatsapp": "542616644340",
   "imagen": "https://i.postimg.cc/tYrsh15K/3e0cdbea-f590-42a2-b18c-8132b1e3e3a1.jpg"
-},
-{
+ },
+  
+ {
   "id": 5,
   "categoria": "servicios",
   "negocio": "Daniel Alleva",
@@ -61,9 +74,28 @@
   "precio": "0",
   "whatsapp": "542616644340",
   "imagen": "https://i.postimg.cc/4n72CtKt/podar-jardin.jpg"
-},
+ },
 
-{
+ {
+  "id": 5,
+  "categoria": "servicios",
+  "negocio": "Aprendé Inglés.",
+  "producto": "Clases de apoyo. Todos los niveles. Profe Pia Panelo.",
+  "precio": "0",
+  "whatsapp": "542634755335",
+  "imagen": "https://i.postimg.cc/kRgrxz2y/6cec9019-93a5-41cd-b302-fd608903a6fe.jpg"
+},
+ 
+ {
+  "id": 5,
+  "categoria": "servicios",
+  "negocio": "Motorbyte GV",
+  "producto": "Inteligencia electrónica. Diagnosticos electrónicos. Escaneos de automotores.",
+  "precio": "0",
+  "whatsapp": "542612352983",
+  "imagen": "https://i.postimg.cc/Q9TQtd8y/9af827ac-1c77-4486-a7f1-ac8ac34a4666.jpg"
+ },
+ {
   "id": 6,
   "categoria": "cuidado personal",
   "negocio": "Alejandra Alleva",
@@ -71,5 +103,35 @@
   "precio": "0",
   "whatsapp": "542634378902",
   "imagen": "https://i.postimg.cc/0rp0vCfK/Ale-1.jpg"
-}
+ },
+
+ {
+  "id": 6,
+  "categoria": "cuidado personal",
+  "negocio": "Estética Carpe Diem",
+  "producto": "Tu cita para lucir uñas perfectas. Tratamientos en pestañas y cejas",
+  "precio": "7500",
+  "whatsapp": "542634225711",
+  "imagen": "https://i.postimg.cc/N5GTH4p1/911564ef-a5ba-4156-af5d-3a6943814c89.jpg"
+},
+ 
+{
+  "id": 7,
+  "categoria": "productos artesanales",
+  "negocio": "Naturaé",
+  "producto": "Conectate con lo natural. Creaciones artesanales.",
+  "precio": "0",
+  "whatsapp": "542612137081",
+  "imagen": "https://i.postimg.cc/DJsCG3K2/8f654981-d7d5-4138-804a-d0f7ae67ae07.jpg"
+ }, 
+ 
+ {
+  "id": 7,
+  "categoria": "productos artesanales",
+  "negocio": "Cariñitos Artesanales",
+  "producto": "Piezas únicas y personalizadas a crochet. Un regalo para cada ocasión.",
+  "precio": "0",
+  "whatsapp": "542634279933",
+  "imagen": "https://i.postimg.cc/CBddmPB9/4.jpg"
+ }
 ]
