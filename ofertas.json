@@ -13,9 +13,18 @@
   "categoria": "comida",
   "negocio": "Parrilla \"El jefecito\"",
   "producto": "Empanadas",
-  "precio": "10.000",
+  "precio": "10000",
   "whatsapp": "542634525384",
   "imagen": "https://i.postimg.cc/F7779rbd/hq720.jpg"
+  },
+  {
+    "id": 2,
+    "categoria": "carnes",
+    "negocio": "Carnicería El Hueso",
+    "producto": "Asado de primera",
+    "precio": "15.000",
+    "whatsapp": "542634XXXXXX",
+    "imagen": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500"
   },
   {
     "id": 3,
