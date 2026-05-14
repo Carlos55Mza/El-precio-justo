@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "categoria": "comida",
-    "negocio": "Despensa Miriam",
-    "producto": "Sándwichs de Miga",
-    "precio": "1.000",
-    "whatsapp": "542634XXXXXX",
-    "imagen": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500"
+  "categoria": "comida",
+  "negocio": "Parrilla \"El jefecito\"",
+  "producto": "Lechón - Costillar - Vacío x kilo",
+  "precio": "$38.000",
+  "whatsapp": "2634525384",
+  "imagen": "https://i.postimg.cc/dZwLsJVx/Publicacion1.jpg"
   },
   {
     "id": 2,
@@ -28,7 +28,25 @@
   },
 {
   "id": 4,
+  "categoria": "indumentaria",
+  "negocio": "Fletes 'El Rápido'",
+  "producto": "Flete Local (San Martín)",
+  "precio": "8.500",
+  "whatsapp": "542634XXXXXX",
+  "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZkTeTvNjtbO17kTkuXtlq9IwFGyItTkpz7A&s"
+},
+{
+  "id": 5,
   "categoria": "servicio",
+  "negocio": "Fletes 'El Rápido'",
+  "producto": "Flete Local (San Martín)",
+  "precio": "8.500",
+  "whatsapp": "542634XXXXXX",
+  "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZkTeTvNjtbO17kTkuXtlq9IwFGyItTkpz7A&s"
+},
+{
+  "id": 6,
+  "categoria": "cuidado personal",
   "negocio": "Fletes 'El Rápido'",
   "producto": "Flete Local (San Martín)",
   "precio": "8.500",
