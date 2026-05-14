@@ -58,7 +58,7 @@
 
  { 
   "id": 5,
-  "categoria": "servicio",
+  "categoria": "servicios",
   "negocio": "Daniel Alleva",
   "producto": "Lavado completo de vehículos a domicilio.",
   "precio": "10.000",
@@ -68,7 +68,7 @@
   
  {
   "id": 5,
-  "categoria": "servicio",
+  "categoria": "servicios",
   "negocio": "Daniel Alleva",
   "producto": "Poda de árboles y parrales, limpieza de lotes y baldíos - Consultar",
   "precio": "0",
@@ -78,7 +78,7 @@
 
  {
   "id": 5,
-  "categoria": "servicio",
+  "categoria": "servicios",
   "negocio": "Aprendé Inglés.",
   "producto": "Clases de apoyo. Todos los niveles. Profe Pia Panelo.",
   "precio": "0",
@@ -88,7 +88,7 @@
  
  {
   "id": 5,
-  "categoria": "servicio",
+  "categoria": "servicios",
   "negocio": "Motorbyte GV",
   "producto": "Inteligencia electrónica. Diagnosticos electrónicos. Escaneos de automotores.",
   "precio": "0",
