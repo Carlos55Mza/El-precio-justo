@@ -20,18 +20,18 @@
   {
     "id": 2,
     "categoria": "carnes",
-    "negocio": "Carnicería El Hueso",
-    "producto": "Asado de primera",
-    "precio": "15.000",
+    "negocio": "Disponible",
+    "producto": "Carnes",
+    "precio": "0",
     "whatsapp": "542634XXXXXX",
-    "imagen": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500"
+    "imagen": "https://i.postimg.cc/WDVtVMb3/images.jpg"
   },
   {
     "id": 3,
     "categoria": "verdura",
-    "negocio": "Verdulería El Camote",
-    "producto": "Bolsón de Verduras",
-    "precio": "15.000",
+    "negocio": "Disponible",
+    "producto": "Verduras y frutas",
+    "precio": "0",
     "whatsapp": "542634XXXXXX",
     "imagen": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500"
   },
@@ -46,20 +46,30 @@
 },
 {
   "id": 5,
-  "categoria": "servicio",
-  "negocio": "Fletes 'El Rápido'",
-  "producto": "Flete Local (San Martín)",
-  "precio": "8.500",
-  "whatsapp": "542634XXXXXX",
-  "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZkTeTvNjtbO17kTkuXtlq9IwFGyItTkpz7A&s"
+  "categoria": "servicios",
+  "negocio": "Daniel Alleva",
+  "producto": "Lavado completo de vehículos a domicilio. ",
+  "precio": "10.000",
+  "whatsapp": "542616644340",
+  "imagen": "https://i.postimg.cc/tYrsh15K/3e0cdbea-f590-42a2-b18c-8132b1e3e3a1.jpg"
 },
+{
+  "id": 5,
+  "categoria": "servicios",
+  "negocio": "Daniel Alleva",
+  "producto": "Poda de árboles y parrales, limpieza de lotes y baldíos - Consultar",
+  "precio": "0",
+  "whatsapp": "542616644340",
+  "imagen": "https://i.postimg.cc/4n72CtKt/podar-jardin.jpg"
+},
+
 {
   "id": 6,
   "categoria": "cuidado personal",
-  "negocio": "Fletes 'El Rápido'",
-  "producto": "Flete Local (San Martín)",
-  "precio": "8.500",
-  "whatsapp": "542634XXXXXX",
-  "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZkTeTvNjtbO17kTkuXtlq9IwFGyItTkpz7A&s"
+  "negocio": "Alejandra Alleva",
+  "producto": "Candela & Alma Gourmet",
+  "precio": "0",
+  "whatsapp": "542634378902",
+  "imagen": "https://i.postimg.cc/0rp0vCfK/Ale-1.jpg"
 }
 ]
