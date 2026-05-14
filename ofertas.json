@@ -41,7 +41,7 @@
   "categoria": "indumentaria",
   "negocio": "Ely Style",
   "producto": "Se viene el frío!! Camperas y chalecos.",
-  "precio": "50000",
+  "precio": "50.000",
   "whatsapp": "542634356024",
   "imagen": "https://i.postimg.cc/4HdRRqbB/camperas.jpg"
  },
@@ -51,7 +51,7 @@
   "categoria": "indumentaria",
   "negocio": "Ely Style",
   "producto": "Para alentar a la Selección. Camiseta Argentina",
-  "precio": "45000",
+  "precio": "45.000",
   "whatsapp": "542634356024",
   "imagen": "https://i.postimg.cc/FYGb76jb/descarga-(4).jpg"
  },
@@ -110,7 +110,7 @@
   "categoria": "cuidado personal",
   "negocio": "Estética Carpe Diem",
   "producto": "Tu cita para lucir uñas perfectas. Tratamientos en pestañas y cejas",
-  "precio": "7500",
+  "precio": "7.500",
   "whatsapp": "542634225711",
   "imagen": "https://i.postimg.cc/N5GTH4p1/911564ef-a5ba-4156-af5d-3a6943814c89.jpg"
 },
